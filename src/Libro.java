@@ -72,4 +72,21 @@ public class Libro {
 
         return sb.toString();
     }
+
+    /**
+     * Actualiza el número de páginas que tiene el libro. Comprueba que el número recibido sea mayor que 0
+     * @param numPags nueva cantidad de páginas
+     * @return true si ha podido cambiarse, false si no ha podido cambiarse
+     */
+    public boolean updateNumPaginas(int numPags) {
+        boolean resultado;
+
+        if( numPags <= 0){
+            resultado = false;
+        } else {
+            this.numPaginas = numPags;
+            resultado = true;
+        }
+        return resultado;
+    }
 }
